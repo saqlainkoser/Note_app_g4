@@ -116,3 +116,8 @@ body{
 .sp-text{
     color: var(--accent);
 }
+
+
+.checkbox.active{
+    background-color: #F57E57;
+}

@@ -4,11 +4,13 @@ import Navbar from '../components/Navbar'
 import { useState, useRef, useMemo } from 'react';
 import JoditEditor from 'jodit-react';
 import Footer from '../components/Footer';
+import Checkbox from '../components/Checkbox';
 
 
 function Addnote() {
     const editor = useRef(null);
 	const [content, setContent] = useState('');
+  const [check,setCheck] = useState(true);
 
   return (
     <>
@@ -35,6 +37,9 @@ function Addnote() {
                 required
                 />
             </div>
+
+            <Checkbox check={check} setCheck={setCheck} title="isImportant"   />
+
 
             <JoditEditor
 			ref={editor}
