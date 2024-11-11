@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar from '../components/Navbar.js'
 import Footer from '../components/Footer.js'
 import Note from '../components/Note.js'
+import oppsimage from '../images/oops.webp'
+import Oop from '../components/Oop.js'
 
 function Search() {
   return (
@@ -11,12 +13,14 @@ function Search() {
             <input type="text" className='inputBox !w-[370px] !p-[5px]' placeholder='Search Notes'/>
         </div>
         
-        <div className="gridItems">
+        {/* <div className="gridItems">
             <Note/>
-        </div>
+        </div> */}
+
+        <Oop image={oppsimage} description="No Search Results Found For Hacking "  buttontitle="Go Back" buttonLink="/"  />
 
 
-      <Footer/>
+      <Footer />
     </>
   )
 }
